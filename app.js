@@ -6,7 +6,7 @@ const https = require("https");
 const app = express();
 const apiKey = process.env.API_Key;
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res) {
